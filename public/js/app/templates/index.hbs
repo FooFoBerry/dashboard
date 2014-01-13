@@ -1,1 +1,12 @@
-{{#link-to "users"}}Go to the users page {{/link-to}}
+<div class="user">
+  {{#each user in users}}
+    <p>YO YO YO</p>
+  {{/each}}
+</div>
+
+<div class="commits">
+  {{#each notification in ghNotifications}}
+    notification
+    {{gh-notification name=notification.name}}
+  {{/each}}
+</div>

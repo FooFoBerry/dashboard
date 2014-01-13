@@ -1,5 +1,8 @@
 App.IndexRoute = Ember.Route.extend({
-  redirect: function() {
-    this.transitionTo('users');
+  model: function() {
+    return Em.RSVP.hash({
+      ghNotifications: this.store.find('GHNotification'),
+      users: this.store.find('user')
+    });
   }
 });
